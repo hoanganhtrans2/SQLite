@@ -1,0 +1,21 @@
+public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.btnStart:
+                Intent iStartService =
+                        new Intent(MainActivity.this,
+                                ServiceMyClass.class);
+                startService(iStartService);
+
+                break;
+            case R.id.btnStop:
+                Intent iStopService = new Intent(MainActivity.this,
+                        ServiceMyClass.class);
+                stopService(iStopService);
+                break;
+            case R.id.btnDisplay:
+                Intent iDisplay = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(iDisplay);
+                break;
+
+        }
+    }
